@@ -13,7 +13,6 @@ public class ProductosService {
 		ObjectContainer db= null;try
 		{
 			db = Db4oEmbedded.openFile("bdProductos");
-			System.out.println(db);
 			List<Producto> respuesta = db.queryByExample(Producto.class);
 			productos.addAll(respuesta);
 		}finally
